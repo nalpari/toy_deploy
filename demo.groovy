@@ -37,7 +37,7 @@ pipeline {
             steps {
 				echo '프로젝트를 빌드합니다.'
 				sh '''
-                    /root/lib/apache-maven-3.6.3/bin/mvn clean package -Dmaven.test.skip=true
+                    /root/lib/apache-maven-3.6.3/bin/mvn clean build -Dmaven.test.skip=true
 					ls -al
 				'''
 			}

@@ -37,7 +37,7 @@ pipeline {
             steps {
 				echo '프로젝트를 빌드합니다.'
 				sh '''
-                    mvn clean package
+                    /root/lib/apache-maven-3.6.3/bin/mvn clean package
 					ls -al
 				'''
 			}

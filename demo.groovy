@@ -48,7 +48,16 @@ pipeline {
 			steps {
 				echo '빌드 파일을 복사합니다.'
 				sh '''
-					cp target/*.jar /root/apps/
+					cp target/*.jar /root/apps/demo.jar
+				'''
+			}
+		}
+		stage('app restart') {
+			steps {
+				echo '인스턴스를 재시작 합니다.'
+				sh '''
+					/root/command/demo.sh stop
+					/root/command/demo.sh start
 				'''
 			}
 		}

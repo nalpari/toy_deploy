@@ -33,11 +33,12 @@ pipeline {
 				]
 			}
 		}
-		stage('test') {
+		stage('build') {
             steps {
-				echo '테스트'
+				echo '프로젝트를 빌드합니다.'
 				sh '''
-                    ls -al
+                    mvn clean package
+					ls -al
 				'''
 			}
 		}

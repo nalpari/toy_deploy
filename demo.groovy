@@ -8,7 +8,10 @@ pipeline {
 			steps {
 				echo '준비작업을 진행합니다.'
 				// sh '/app/build/work/maven/bin/mvn -version'
-				sh 'ls -al'
+				sh '''
+					ls -al
+					maven -version
+				'''
 			}
 		}
 		stage('Checkout') {

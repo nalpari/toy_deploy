@@ -44,5 +44,13 @@ pipeline {
 				'''
 			}
 		}
+		stage('Artifact Copy') {
+			steps {
+				echo '빌드 파일을 복사합니다.'
+				sh '''
+					cp target/*.jar /root/apps/
+				'''
+			}
+		}
     }
 }

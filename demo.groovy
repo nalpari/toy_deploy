@@ -10,7 +10,6 @@ pipeline {
 				// sh '/app/build/work/maven/bin/mvn -version'
 				sh '''
 					ls -al
-					maven -version
 				'''
 			}
 		}
